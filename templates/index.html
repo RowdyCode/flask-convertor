@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PDF to Text Conversion</title>
+</head>
+<body>
+    <h1>File Conversion Platform</h1>
+
+    <!-- Your ads div -->
+    <div id="ads" style="width: 800px;height: 200px;">
+        <!-- Add your ad content here -->
+        Ad content goes here
+    </div>
+
+    <form method="post" action="/convert" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Convert">
+    </form>
+
+    <p><a href="{{ url_for('download_file', filename='sample.txt') }}">Sample Text File</a></p>
+	<div id="ads" style="width: 800px;height: 200px;">
+        <!-- Add your ad content here -->
+        Ad content goes here
+    </div>
+</body>
+</html>

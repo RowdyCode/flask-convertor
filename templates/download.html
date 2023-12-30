@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PDF to Text Conversion</title>
+</head>
+<body>
+    <h1>PDF to Text Conversion</h1>
+
+    <!-- Your ads div -->
+    <div id="ads" style="width: 800px;height: 200px;">
+        <!-- Add your ad content here -->
+        Ad content goes here
+    </div>
+
+    {% if txt_filename %}
+        <p>Conversion successful! Download your converted text file: <a href="{{ url_for('download_file', filename=txt_filename) }}">{{ txt_filename }}</a></p>
+    {% elif conversion_failed %}
+        <p>Conversion failed. Please make sure you are uploading a valid PDF file.</p>
+    {% else %}
+        <p>No conversion performed.</p>
+    {% endif %}
+    <p><a href="{{ url_for('index') }}">Back to Home</a></p>
+    <div id="ads" style="width: 800px;height: 200px;">
+        <!-- Add your ad content here -->
+        Ad content goes here
+    </div>
+</body>
+</html>
